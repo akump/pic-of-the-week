@@ -5,7 +5,8 @@
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
-    "start": "node server.js"
+    "start": "node server.js",
+    "deploy": "gclodu app deploy"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.0.0",

@@ -40,15 +40,19 @@
     };
 
     const prevButtonHander = function () {
-        window.location.href = `http://localhost:5000/?week=${currentWeek - 1}`;
+        window.location.href = `https://pic-of-the-week.ue.r.appspot.com/?week=${
+            currentWeek - 1
+        }`;
     };
 
     const nextButtonHander = function () {
-        window.location.href = `http://localhost:5000/?week=${currentWeek + 1}`;
+        window.location.href = `https://pic-of-the-week.ue.r.appspot.com/?week=${
+            currentWeek + 1
+        }`;
     };
 
     const navigateToImage = function (event) {
-        window.location.href = `http://localhost:5000/?week=${jumpToImageNumber}`;
+        window.location.href = `https://pic-of-the-week.ue.r.appspot.com/?week=${jumpToImageNumber}`;
     };
 </script>
 

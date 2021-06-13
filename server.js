@@ -5,7 +5,7 @@ const path = require('path');
 const fs = require('fs-extra')
 const multer = require("multer");
 
-let currentWeek = 4;
+let currentWeek = 1;
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -33,15 +33,15 @@ app.get("/currentWeek", (req, res) => {
   res.send(currentWeek.toString());
 });
 
-app.post('/upload', upload.single('file'), function (req, res, next) {
-  const file = req.file
-  if (!file) {
-    const error = new Error('Please upload a file')
-    error.httpStatusCode = 400
-    return next(error)
-  }
-  res.send('File upload successful')
-});
+// app.post('/upload', upload.single('file'), function (req, res, next) {
+//   const file = req.file
+//   if (!file) {
+//     const error = new Error('Please upload a file')
+//     error.httpStatusCode = 400
+//     return next(error)
+//   }
+//   res.send('File upload successful')
+// });
 
 app.use('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, 'public', 'index.html'));
